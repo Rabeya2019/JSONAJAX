@@ -1,0 +1,13 @@
+<html>
+<body>
+<h1>Fetch content from backend using AJAX</h1>
+<p id="content"></p>
+<script type="text/javascript">
+fetch('https://jsonplaceholder.typicode.com/todos/1')
+.then(response => response.json())
+.then(json => {
+document.getElementById("content").innerHTML = json.title;
+})
+</script>
+</body>
+</html>
